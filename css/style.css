@@ -1,0 +1,183 @@
+:root {
+  /*Font*/
+
+  /*Text colors*/
+  --body-txt-cl: #434455;
+  --subtel-txt-cl: #8e8f99;
+  --headlings-dark-cl: #2e2f42;
+
+  /*Background colors*/
+  --accent-bg-cl: #e7e9fc;
+  --light-bg-cl: #f4f4fd;
+  --hero-bg-cl: #2e2f42;
+  /*Others colors*/
+  --primary-band-cl: #4d5ae5;
+  --pressed-state-cl: #404bbf;
+  --dark-overlays-cl: #2e2f42;
+  --success-cl: #31d0aa;
+  --success-75-cl: rgba(49, 208, 170, 0.75);
+  --success-50-cl: rgba(49, 208, 170, 0.5);
+  --success-10-cl: rgba(49, 208, 170, 0.1);
+  --modal-overlay-cl: #2e2f42;
+}
+
+body {
+  color: var(--body-txt-cl);
+  background-color: white;
+  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+}
+.logo-dark {
+  color: var(--primary-band-cl);
+  text-decoration: none;
+  width: 44px;
+  height: 24px;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+}
+.logo-dark span {
+  color: var(--dark-overlays-cl);
+}
+.main-button {
+  color: white;
+  background-color: var(--primary-band-cl);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.main-button:hover {
+  color: white;
+  background-color: var(--pressed-state-cl);
+}
+
+.button-nav .button {
+  color: var(--primary-band-cl);
+  background-color: var(--light-bg-cl);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.button-nav .button:hover {
+  color: white;
+  background-color: var(--pressed-state-cl);
+}
+.site-nav li a {
+  color: var(--body-txt-cl);
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.site-nav li a:hover,
+.site-nav li a:focus {
+  color: var(--pressed-state-cl);
+}
+.contacts li a {
+  color: var(--body-txt-cl);
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.contacts li a:hover,
+.contacts li a:focus {
+  color: var(--pressed-state-cl);
+}
+.main-title {
+  color: white;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 56px;
+  line-height: 1.07;
+}
+.main-page-bg {
+  background-color: var(--dark-overlays-cl);
+}
+.big-title {
+  color: var(--dark-overlays-cl);
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 36px;
+  line-height: 1.11;
+}
+.benefits h3 {
+  color: var(--dark-overlays-cl);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.benefits p {
+  color: var(--dark-overlays-cl);
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 1.5;
+}
+.team h3 {
+  color: var(--dark-overlays-cl);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.team p {
+  color: var(--dark-overlays-cl);
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 1.5;
+}
+.footer {
+  background-color: var(--dark-overlays-cl);
+}
+.footer p {
+  color: var(--accent-bg-cl);
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 1.5;
+}
+.logo-light {
+  color: var(--primary-band-cl);
+  text-decoration: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.16;
+}
+.logo-light span {
+  color: var(--light-bg-cl);
+  text-decoration: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.16;
+}
+.main-portfolio h2 {
+  color: var(--dark-overlays-cl);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.main-portfolio p {
+  color: var(--body-txt-cl);
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 1.5;
+}
