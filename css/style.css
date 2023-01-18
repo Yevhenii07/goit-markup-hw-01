@@ -10,6 +10,7 @@
   --accent-bg-cl: #e7e9fc;
   --light-bg-cl: #f4f4fd;
   --hero-bg-cl: #2e2f42;
+  --main-bg-cl: white;
   /*Others colors*/
   --primary-band-cl: #4d5ae5;
   --pressed-state-cl: #404bbf;
@@ -20,11 +21,12 @@
   --success-10-cl: rgba(49, 208, 170, 0.1);
   --modal-overlay-cl: #2e2f42;
 }
-
 body {
   color: var(--body-txt-cl);
-  background-color: white;
+  background-color: var(--main-bg-cl);
+  font-style: normal;
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
 }
 .logo-dark {
   color: var(--primary-band-cl);
@@ -32,152 +34,109 @@ body {
   width: 44px;
   height: 24px;
   font-family: "Raleway", sans-serif;
-  font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
+  letter-spacing: 0.03em;
 }
 .logo-dark span {
   color: var(--dark-overlays-cl);
 }
 .main-button {
-  color: white;
+  color: var(--main-bg-cl);
   background-color: var(--primary-band-cl);
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.04em;
   cursor: pointer;
 }
 .main-button:hover {
-  color: white;
+  color: var(--main-bg-cl);
   background-color: var(--pressed-state-cl);
 }
-
 .button-nav .button {
   color: var(--primary-band-cl);
   background-color: var(--light-bg-cl);
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.04em;
   cursor: pointer;
 }
 .button-nav .button:hover {
-  color: white;
+  color: var(--main-bg-cl);
   background-color: var(--pressed-state-cl);
 }
-.site-nav li a {
+.list {
+  list-style: none;
+}
+.nav-link:hover {
+  color: var(--pressed-state-cl);
+}
+.nav-link {
   color: var(--body-txt-cl);
-  text-decoration: none;
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.02em;
 }
-
-.site-nav li a:hover,
-.site-nav li a:focus {
+.contact-link:hover,
+.contact-link:focus {
   color: var(--pressed-state-cl);
 }
-.contacts li a {
+.contact-link {
   color: var(--body-txt-cl);
-  text-decoration: none;
-  font-family: "Roboto";
-  font-style: normal;
-  font-size: 16px;
+  letter-spacing: 0.02em;
   line-height: 1.5;
+  font-style: normal;
+  letter-spacing: 0.02em;
 }
-.contacts li a:hover,
-.contacts li a:focus {
-  color: var(--pressed-state-cl);
+.link {
+  text-decoration: none;
 }
 .main-title {
-  color: white;
-  font-family: "Roboto";
-  font-style: normal;
+  color: var(--main-bg-cl);
   font-size: 56px;
   line-height: 1.07;
+  letter-spacing: 0.02em;
 }
 .main-page-bg {
   background-color: var(--dark-overlays-cl);
 }
-.big-title {
+.title {
   color: var(--dark-overlays-cl);
-  font-family: "Roboto";
-  font-style: normal;
   font-size: 36px;
   line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
 }
-.benefits h3 {
+.subtitle {
   color: var(--dark-overlays-cl);
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
+  letter-spacing: 0.02em;
 }
-.benefits p {
+.text {
   color: var(--dark-overlays-cl);
-  font-family: "Roboto";
-  font-size: 16px;
   line-height: 1.5;
-}
-.team h3 {
-  color: var(--dark-overlays-cl);
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-}
-.team p {
-  color: var(--dark-overlays-cl);
-  font-family: "Roboto";
-  font-size: 16px;
-  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 .footer {
   background-color: var(--dark-overlays-cl);
 }
 .footer p {
   color: var(--accent-bg-cl);
-  font-family: "Roboto";
-  font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 .logo-light {
   color: var(--primary-band-cl);
   text-decoration: none;
   font-family: "Raleway";
-  font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.16;
+  letter-spacing: 0.03em;
 }
 .logo-light span {
   color: var(--light-bg-cl);
-  text-decoration: none;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.16;
-}
-.main-portfolio h2 {
-  color: var(--dark-overlays-cl);
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-}
-.main-portfolio p {
-  color: var(--body-txt-cl);
-  font-family: "Roboto";
-  font-size: 16px;
-  line-height: 1.5;
 }
