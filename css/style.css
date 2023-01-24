@@ -30,6 +30,10 @@ body {
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
 }
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 img {
   display: block;
 }
@@ -76,8 +80,6 @@ p {
   line-height: 1.33;
   letter-spacing: 0.03em;
   margin-right: 76px;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .logo-dark span {
   color: var(--dark-overlays-cl);
@@ -91,7 +93,6 @@ p {
   cursor: pointer;
   border-style: none;
   padding: 16px 32px;
-  margin-bottom: 188px;
   border-radius: 4px;
   margin-right: auto;
   margin-left: auto;
@@ -104,8 +105,6 @@ p {
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding-top: 96px;
-  padding-bottom: 72px;
 }
 .button-nav .button {
   color: var(--primary-band-cl);
@@ -117,6 +116,7 @@ p {
   border: 1px solid var(--accent-bg-cl);
   border-radius: 4px;
   padding: 12px 24px;
+  margin-bottom: 72px;
 }
 .button-nav .button:hover {
   color: var(--main-bg-cl);
@@ -124,6 +124,8 @@ p {
 }
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .nav-link:hover {
   color: var(--pressed-state-cl);
@@ -159,16 +161,15 @@ p {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  padding-top: 200px;
   padding-bottom: 48px;
   width: 504px;
   margin-right: auto;
   margin-left: auto;
 }
-.main-page-bg {
+.main {
   background-color: var(--dark-overlays-cl);
   text-align: center;
-  margin-bottom: 120px;
+  padding: 188px 0;
 }
 .title {
   color: var(--dark-overlays-cl);
@@ -177,11 +178,7 @@ p {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   text-align: center;
-  padding-bottom: 72px;
-  padding-left: 0px;
-}
-.title-team {
-  padding-top: 120px;
+  margin-bottom: 72px;
 }
 .subtitle {
   color: var(--dark-overlays-cl);
@@ -189,17 +186,15 @@ p {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 .text {
   color: var(--dark-overlays-cl);
   line-height: 1.5;
   letter-spacing: 0.02em;
-  width: 264px;
 }
 .section-team {
   background-color: var(--light-bg-cl);
-  padding-bottom: 120px;
 }
 .footer {
   background-color: var(--dark-overlays-cl);
@@ -231,8 +226,6 @@ p {
 .header-container {
   display: flex;
   align-items: center;
-  height: 72px;
-  border-bottom: 1px solid var(--accent-bg-cl);
 }
 .header-list {
   display: flex;
@@ -240,6 +233,9 @@ p {
 }
 .header-nav {
   margin-right: auto;
+}
+.header {
+  border-bottom: 1px solid var(--accent-bg-cl);
 }
 .contact-list {
   display: flex;
@@ -249,20 +245,14 @@ p {
 .benefits-list {
   display: flex;
   gap: 24px;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: 0px;
 }
 .benefits {
-  margin-bottom: 120px;
+  padding-bottom: 0;
 }
 .img-list {
   display: flex;
   gap: 24px;
   padding-left: 0px;
-}
-.section-img {
-  margin-bottom: 120px;
 }
 .team-list {
   display: flex;
@@ -277,7 +267,7 @@ p {
 }
 .team-img > h3 {
   text-align: center;
-  margin-bottom: 8px;
+  margin-top: 8px;
 }
 .team-img > p {
   text-align: center;
@@ -287,13 +277,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  padding-left: 0;
-  padding-right: 0;
-  margin-bottom: 120px;
 }
 .portfolio-item {
   flex-basis: calc((100%- (var(--indent) * (var(--items)-1))) / var(--items));
   margin-bottom: 48px;
+}
+.portfolio {
+  padding-top: 96px;
 }
 .description {
   padding-left: 16px;
