@@ -21,9 +21,14 @@
   --success-10-cl: rgba(49, 208, 170, 0.1);
   --modal-overlay-cl: #2e2f42;
 
+  /*Others*/
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   --indent: 24px;
   --items: 3;
 }
+
 body {
   color: var(--body-txt-cl);
   background-color: var(--main-bg-cl);
@@ -101,10 +106,14 @@ p {
   border-radius: 4px;
   margin-right: auto;
   margin-left: auto;
+  transition: color var(--transition-duration),
+    background-color var(--transition-duration),
+    cursor var(--transition-duration);
 }
 .main-button:hover {
   color: var(--main-bg-cl);
   background-color: var(--pressed-state-cl);
+  cursor: pointer;
 }
 .button-nav {
   justify-content: center;
@@ -121,6 +130,9 @@ p {
   border: 1px solid var(--accent-bg-cl);
   border-radius: 4px;
   padding: 12px 24px;
+  transition: color var(--transition-duration),
+    background-color var(--transition-duration),
+    box-shadow var(--transition-duration), border var(--transition-duration);
 }
 .button-nav .button:hover,
 .button-nav .button:focus {
@@ -131,18 +143,34 @@ p {
   border: 1px solid var(--pressed-state-cl);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--pressed-state-cl);
+  outline: none;
+}
+
+.nav-link.current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0px;
+  border-radius: 2px;
+  background-color: var(--pressed-state-cl);
 }
 .nav-link {
   display: block;
+  position: relative;
   color: var(--body-txt-cl);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: color var(--transition-duration);
 }
+
 .contact-link:hover,
 .contact-link:focus {
   color: var(--pressed-state-cl);
@@ -156,6 +184,7 @@ p {
   letter-spacing: 0.02em;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: color var(--transition-duration);
 }
 .link {
   text-decoration: none;
@@ -258,7 +287,6 @@ p {
   margin-right: auto;
 }
 .header {
-  border-bottom: 1px solid var(--accent-bg-cl);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -325,11 +353,43 @@ p {
 .portfolio-item {
   flex-basis: calc((100%- (var(--indent) * (var(--items)-1))) / var(--items));
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-
+  transition: box-shadow var(--transition-duration);
 }
 .portfolio-item:hover,
 .portfolio-item:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.portfolio-item .overlay-txt {
+  width: 296px;
+  letter-spacing: 0.02em;
+  color: var(--light-bg-cl);
+}
+.box-overlay {
+  display: block;
+}
+.portfolio .box-overlay {
+  position: relative;
+  max-height: 294px;
+  overflow: hidden;
+}
+.cards-link .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 40px 24px;
+  background-color: var(--primary-band-cl);
+  transform: translateY(150%);
+  transition-property: transform;
+
+  transition: var(--transition-duration) var(--transition-timing-function);
+}
+.cards-link:hover .overlay,
+.cards-link:hover .overlay {
+  transform: translateY(0);
 }
 .portfolio {
   padding-top: 96px;
@@ -356,6 +416,8 @@ p {
   height: 40px;
   background-color: var(--primary-band-cl);
   border-radius: 50px;
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .socials-link:hover,
@@ -373,13 +435,12 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 32px;
-  padding-right: 32px;
   background-color: var(--main-bg-cl);
   border: 1px solid var(--subtel-txt-cl);
   border-radius: 4px;
   height: 88px;
   fill: var(--subtel-txt-cl);
+  transition: border var(--transition-duration), fill var(--transition-duration);
 }
 .customer-link:hover,
 .customer-link:focus {
@@ -411,6 +472,8 @@ p {
   height: 40px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50px;
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .socials-link-footer:hover,
@@ -420,4 +483,54 @@ p {
 
 .socials-icon-footer {
   fill: var(--main-bg-cl);
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+  transition: opacity var(--transition-duration)
+      var(--transition-timing-function),
+    visibility var(--transition-duration) var(--transition-timing-function);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  position: inherit;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  background-color: var(--main-bg-cl);
+  width: 408px;
+  height: 576px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: var(--transition-duration) var(--transition-timing-function);
+}
+.backdrop.is-hidden .modal {
+  transform: translateX(-50%) translateY(-25%);
+  transition-delay: 0;
+}
+.modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--accent-bg-cl);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-icon {
 }
