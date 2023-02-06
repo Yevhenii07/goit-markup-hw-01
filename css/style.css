@@ -106,9 +106,9 @@ p {
   border-radius: 4px;
   margin-right: auto;
   margin-left: auto;
-  transition: color var(--transition-duration),
-    background-color var(--transition-duration),
-    cursor var(--transition-duration);
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function),
+    cursor var(--transition-duration) var(--transition-timing-function);
 }
 .main-button:hover {
   color: var(--main-bg-cl);
@@ -130,9 +130,9 @@ p {
   border: 1px solid var(--accent-bg-cl);
   border-radius: 4px;
   padding: 12px 24px;
-  transition: color var(--transition-duration),
-    background-color var(--transition-duration),
-    box-shadow var(--transition-duration), border var(--transition-duration);
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration), border var(--transition-duration) var(--transition-timing-function);
 }
 .button-nav .button:hover,
 .button-nav .button:focus {
@@ -168,7 +168,7 @@ p {
   letter-spacing: 0.02em;
   padding-top: 24px;
   padding-bottom: 24px;
-  transition: color var(--transition-duration);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .contact-link:hover,
@@ -184,7 +184,7 @@ p {
   letter-spacing: 0.02em;
   padding-top: 24px;
   padding-bottom: 24px;
-  transition: color var(--transition-duration);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 .link {
   text-decoration: none;
@@ -353,7 +353,7 @@ p {
 .portfolio-item {
   flex-basis: calc((100%- (var(--indent) * (var(--items)-1))) / var(--items));
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-  transition: box-shadow var(--transition-duration);
+  transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 .portfolio-item:hover,
 .portfolio-item:focus {
@@ -532,5 +532,4 @@ p {
   background-color: var(--accent-bg-cl);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.modal-icon {
-}
+
