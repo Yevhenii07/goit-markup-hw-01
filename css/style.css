@@ -1,4 +1,5 @@
 :root {
+   /* Colors */
   --primary-brand: #4d5ae5;
   --pressed-state: #404bbf;
   --dark: #2e2f42;
@@ -13,6 +14,8 @@
   --modal-overlay: #2e2f4266;
   --hero-background: #2e2f42b2;
   --white: #ffffff;
+
+   /* Others */
   --card-set-gap: 24px;
   --transition-duration: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -418,9 +421,9 @@ body {
 
 @media screen and (max-width: 767px) {
   .benefits-item {
-    flex-basis: calc((100% - 24px) / 2);
+    flex-basis: calc((100% - var()) / 2);
   }
-  .benefits:not(:last-child) {
+  .benefits-item:not(:last-child) {
     margin-bottom: 72px;
   }
 }
