@@ -1158,6 +1158,10 @@ textarea {
       var(--transition-timing-function),
     fill var(--transition-duration) var(--transition-timing-function);
 }
+.menu-close-btn:hover {
+  background-color: var(--pressed-state);
+  fill: var(--white);
+}
 
 @media (min-width: 768px) {
   .menu-hamburguer {
